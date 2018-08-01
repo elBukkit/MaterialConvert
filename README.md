@@ -1,2 +1,4 @@
-# MaterialConvert
-A tool for converting material ids to enums
+MaterialConvert
+=================
+
+A plugin for converting material ids to Material enums

@@ -1,0 +1,11 @@
+name: MaterialConvert
+main: com.elmakers.mine.bukkit.plugins.MaterialConverter
+version: 1.0
+api-version: 1.13
+website: http://mine.elmakers.com
+author: NathanWolf
+description : A plugin to help convert material strings
+commands:
+  convert:
+    description: Converts all numeric ids to Material enums
+    usage: convert <string>
