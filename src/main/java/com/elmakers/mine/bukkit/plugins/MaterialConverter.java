@@ -45,8 +45,13 @@ public class MaterialConverter extends JavaPlugin implements Listener {
                 // handle CSV lists
                 String[] pieces = StringUtils.split(args[i], ',');
                 for (int j = 0; j < pieces.length; j++) {
-                    int materialId = Integer.parseInt(pieces[j]);
-                    Material material = materialIdMap.get(materialId);
+                    Material material;
+                    try {
+                        int materialId = Integer.parseInt(pieces[j]);
+                        material = materialIdMap.get(materialId);
+                    } catch (Exception notint) {
+                        material = Material.getMaterial(pieces[j].toUpperCase(), true);
+                    }
                     if (material == null) continue;
                     if (material.isLegacy()) {
                         Material converted = Bukkit.getUnsafe().fromLegacy(material);
@@ -58,7 +63,6 @@ public class MaterialConverter extends JavaPlugin implements Listener {
                 }
                 args[i] = StringUtils.join(pieces, ',');
             } catch (Exception ignore) {
-
             }
         }
         String converted = StringUtils.join(args, ' ');
