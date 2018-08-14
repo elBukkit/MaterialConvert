@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.elmakers.mine.bukkit.plugins</groupId>
 	<artifactId>MaterialConvert</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>Material Converter</name>
 	<description>Plugin for helping to convert material ids to strings</description>
 	<url>http://mine.elmakers.com</url>
